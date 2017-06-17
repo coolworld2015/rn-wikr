@@ -65,9 +65,9 @@ class Movies extends Component {
 				this.getItems()
 			}, 300);
         }
-    }
-
-    getItems() {
+    }	
+	
+	getItems() {
 		this.setState({
 			serverError: false,
             resultsCount: 0,
@@ -76,7 +76,7 @@ class Movies extends Component {
 			searchQuery: ''
         });
 		
-        AsyncStorage.getItem('rn-movies.movies')
+        AsyncStorage.getItem('rn-wikr.posts')
             .then(req => JSON.parse(req))
             .then(json => {
 				if (json) {
@@ -145,19 +145,12 @@ class Movies extends Component {
                     <View style={styles.textBlock}>
                         <Text style={styles.textItemBold}>
 							{rowData.name}
+						</Text>                           
+						
+						<Text style={styles.textItemBold}>
+							Wikr.com
 						</Text>                        
-						
-						<Text style={styles.textItem}>
-							{rowData.artist}
-						</Text>
-						
-						<Text style={styles.textItem}>
-							{rowData.album}
-						</Text>
-						
-						<Text style={styles.textItem}>
-							{rowData.duration}
-						</Text>	
+
                     </View>
                 </View>
             </TouchableHighlight>

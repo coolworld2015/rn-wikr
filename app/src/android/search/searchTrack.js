@@ -60,76 +60,336 @@ class SearchTrack extends Component {
     }
 	
     getItems() {
+		let json = [
+			{
+				url: 'https://www.facebook.com/wikrcom/videos/1117043335106253/',
+				name: 'Bomby bags made from T-shirts',
+				trackId: '1',
+				image: 'https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-1/14906834_947251632085425_3101138519701294434_n.png?oh=49e9d0a3f14339f96137876efe727ca9&oe=59CF4C1C',
+				artist: 'https://www.facebook.com/wikrcom/videos/1117043335106253/',
+				//album: 'Wikr.com',
+				duration: 'Wikr.com'
+			},
+			{
+				url: 'https://www.facebook.com/wikrcom/videos/vl.720074554828774/853479708129285/?type=1',
+				name: 'Apple Roses With Cinnamon And Cream Cheese. So Elegant, So Delicious!',
+				trackId: '2',
+				image: 'https://scontent.fhen1-1.fna.fbcdn.net/v/t15.0-10/s173x172/18259557_10154288489106529_5042799940653285376_n.jpg?oh=7242ac96b7db9249a3d2289c8e9f819f&oe=59A0FE87',
+				artist: 'https://www.facebook.com/wikrcom/videos/vl.720074554828774/853479708129285/?type=1',
+				//album: 'Wikr.com',
+				duration: 'Wikr.com'
+			},
+			{
+				url: 'https://www.facebook.com/wikrcom/videos/1108612915949295/',
+				name: 'I sewed this very skirt. Yes, out of a shirt',
+				trackId: '2',
+				image: 'https://scontent.fhen1-1.fna.fbcdn.net/v/t15.0-10/p720x720/18943012_1108625199281400_6120594963945226240_n.jpg?oh=6fdf41418372f2a14336d8efd904af69&oe=599DDA55',
+				artist: 'https://www.facebook.com/wikrcom/videos/1108612915949295/',
+				//album: 'Wikr.com',
+				duration: 'Wikr.com'
+			},
+			{
+				url: 'https://www.facebook.com/wikrcom/videos/1117790755031511/',
+				name: 'Vanilla panna cotta with strawberry gelatin',
+				trackId: '3',
+				image: 'https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-0/p75x225/19060043_1117791485031438_5856102670120566329_n.jpg?oh=eaadf94870b73edcd960776f4e4042a7&oe=59D7E76F',
+				artist: 'https://www.facebook.com/wikrcom/videos/1117790755031511/',
+				//album: 'Wikr.com',
+				duration: 'Wikr.com'
+			},			
+			{
+				url: 'https://www.facebook.com/wikrcom/videos/1117043335106253/',
+				name: 'Bomby bags made from T-shirts',
+				trackId: '4',
+				image: 'https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-1/14906834_947251632085425_3101138519701294434_n.png?oh=49e9d0a3f14339f96137876efe727ca9&oe=59CF4C1C',
+				artist: 'https://www.facebook.com/wikrcom/videos/1117043335106253/',
+				//album: 'Wikr.com',
+				duration: 'Wikr.com'
+			},
+			{
+				url: 'https://www.facebook.com/wikrcom/videos/vl.720074554828774/853479708129285/?type=1',
+				name: 'Apple Roses With Cinnamon And Cream Cheese. So Elegant, So Delicious!',
+				trackId: '5',
+				image: 'https://scontent.fhen1-1.fna.fbcdn.net/v/t15.0-10/s173x172/18259557_10154288489106529_5042799940653285376_n.jpg?oh=7242ac96b7db9249a3d2289c8e9f819f&oe=59A0FE87',
+				artist: 'https://www.facebook.com/wikrcom/videos/vl.720074554828774/853479708129285/?type=1',
+				//album: 'Wikr.com',
+				duration: 'Wikr.com'
+			},
+			{
+				url: 'https://www.facebook.com/wikrcom/videos/1108612915949295/',
+				name: 'I sewed this very skirt. Yes, out of a shirt',
+				trackId: '6',
+				image: 'https://scontent.fhen1-1.fna.fbcdn.net/v/t15.0-10/p720x720/18943012_1108625199281400_6120594963945226240_n.jpg?oh=6fdf41418372f2a14336d8efd904af69&oe=599DDA55',
+				artist: 'https://www.facebook.com/wikrcom/videos/1108612915949295/',
+				//album: 'Wikr.com',
+				duration: 'Wikr.com'
+			},
+			{
+				url: 'https://www.facebook.com/wikrcom/videos/1117790755031511/',
+				name: 'Vanilla panna cotta with strawberry gelatin',
+				trackId: '7',
+				image: 'https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-0/p75x225/19060043_1117791485031438_5856102670120566329_n.jpg?oh=eaadf94870b73edcd960776f4e4042a7&oe=59D7E76F',
+				artist: 'https://www.facebook.com/wikrcom/videos/1117790755031511/',
+				//album: 'Wikr.com',
+				duration: 'Wikr.com'
+			},
+			{
+				url: 'https://www.facebook.com/wikrcom/videos/1117043335106253/',
+				name: 'Bomby bags made from T-shirts',
+				trackId: '11',
+				image: 'https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-1/14906834_947251632085425_3101138519701294434_n.png?oh=49e9d0a3f14339f96137876efe727ca9&oe=59CF4C1C',
+				artist: 'https://www.facebook.com/wikrcom/videos/1117043335106253/',
+				//album: 'Wikr.com',
+				duration: 'Wikr.com'
+			},
+			{
+				url: 'https://www.facebook.com/wikrcom/videos/vl.720074554828774/853479708129285/?type=1',
+				name: 'Apple Roses With Cinnamon And Cream Cheese. So Elegant, So Delicious!',
+				trackId: '12',
+				image: 'https://scontent.fhen1-1.fna.fbcdn.net/v/t15.0-10/s173x172/18259557_10154288489106529_5042799940653285376_n.jpg?oh=7242ac96b7db9249a3d2289c8e9f819f&oe=59A0FE87',
+				artist: 'https://www.facebook.com/wikrcom/videos/vl.720074554828774/853479708129285/?type=1',
+				//album: 'Wikr.com',
+				duration: 'Wikr.com'
+			},
+			{
+				url: 'https://www.facebook.com/wikrcom/videos/1108612915949295/',
+				name: 'I sewed this very skirt. Yes, out of a shirt',
+				trackId: '112',
+				image: 'https://scontent.fhen1-1.fna.fbcdn.net/v/t15.0-10/p720x720/18943012_1108625199281400_6120594963945226240_n.jpg?oh=6fdf41418372f2a14336d8efd904af69&oe=599DDA55',
+				artist: 'https://www.facebook.com/wikrcom/videos/1108612915949295/',
+				//album: 'Wikr.com',
+				duration: 'Wikr.com'
+			},
+			{
+				url: 'https://www.facebook.com/wikrcom/videos/1117790755031511/',
+				name: 'Vanilla panna cotta with strawberry gelatin',
+				trackId: '13',
+				image: 'https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-0/p75x225/19060043_1117791485031438_5856102670120566329_n.jpg?oh=eaadf94870b73edcd960776f4e4042a7&oe=59D7E76F',
+				artist: 'https://www.facebook.com/wikrcom/videos/1117790755031511/',
+				//album: 'Wikr.com',
+				duration: 'Wikr.com'
+			},			
+			{
+				url: 'https://www.facebook.com/wikrcom/videos/1117043335106253/',
+				name: 'Bomby bags made from T-shirts',
+				trackId: '14',
+				image: 'https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-1/14906834_947251632085425_3101138519701294434_n.png?oh=49e9d0a3f14339f96137876efe727ca9&oe=59CF4C1C',
+				artist: 'https://www.facebook.com/wikrcom/videos/1117043335106253/',
+				//album: 'Wikr.com',
+				duration: 'Wikr.com'
+			},
+			{
+				url: 'https://www.facebook.com/wikrcom/videos/vl.720074554828774/853479708129285/?type=1',
+				name: 'Apple Roses With Cinnamon And Cream Cheese. So Elegant, So Delicious!',
+				trackId: '15',
+				image: 'https://scontent.fhen1-1.fna.fbcdn.net/v/t15.0-10/s173x172/18259557_10154288489106529_5042799940653285376_n.jpg?oh=7242ac96b7db9249a3d2289c8e9f819f&oe=59A0FE87',
+				artist: 'https://www.facebook.com/wikrcom/videos/vl.720074554828774/853479708129285/?type=1',
+				//album: 'Wikr.com',
+				duration: 'Wikr.com'
+			},
+			{
+				url: 'https://www.facebook.com/wikrcom/videos/1108612915949295/',
+				name: 'I sewed this very skirt. Yes, out of a shirt',
+				trackId: '16',
+				image: 'https://scontent.fhen1-1.fna.fbcdn.net/v/t15.0-10/p720x720/18943012_1108625199281400_6120594963945226240_n.jpg?oh=6fdf41418372f2a14336d8efd904af69&oe=599DDA55',
+				artist: 'https://www.facebook.com/wikrcom/videos/1108612915949295/',
+				//album: 'Wikr.com',
+				duration: 'Wikr.com'
+			},
+			{
+				url: 'https://www.facebook.com/wikrcom/videos/1117790755031511/',
+				name: 'Vanilla panna cotta with strawberry gelatin',
+				trackId: '17',
+				image: 'https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-0/p75x225/19060043_1117791485031438_5856102670120566329_n.jpg?oh=eaadf94870b73edcd960776f4e4042a7&oe=59D7E76F',
+				artist: 'https://www.facebook.com/wikrcom/videos/1117790755031511/',
+				//album: 'Wikr.com',
+				duration: 'Wikr.com'
+			},
+			{
+				url: 'https://www.facebook.com/wikrcom/videos/1117043335106253/',
+				name: 'Bomby bags made from T-shirts',
+				trackId: '21',
+				image: 'https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-1/14906834_947251632085425_3101138519701294434_n.png?oh=49e9d0a3f14339f96137876efe727ca9&oe=59CF4C1C',
+				artist: 'https://www.facebook.com/wikrcom/videos/1117043335106253/',
+				//album: 'Wikr.com',
+				duration: 'Wikr.com'
+			},
+			{
+				url: 'https://www.facebook.com/wikrcom/videos/vl.720074554828774/853479708129285/?type=1',
+				name: 'Apple Roses With Cinnamon And Cream Cheese. So Elegant, So Delicious!',
+				trackId: '22',
+				image: 'https://scontent.fhen1-1.fna.fbcdn.net/v/t15.0-10/s173x172/18259557_10154288489106529_5042799940653285376_n.jpg?oh=7242ac96b7db9249a3d2289c8e9f819f&oe=59A0FE87',
+				artist: 'https://www.facebook.com/wikrcom/videos/vl.720074554828774/853479708129285/?type=1',
+				//album: 'Wikr.com',
+				duration: 'Wikr.com'
+			},
+			{
+				url: 'https://www.facebook.com/wikrcom/videos/1108612915949295/',
+				name: 'I sewed this very skirt. Yes, out of a shirt',
+				trackId: '22',
+				image: 'https://scontent.fhen1-1.fna.fbcdn.net/v/t15.0-10/p720x720/18943012_1108625199281400_6120594963945226240_n.jpg?oh=6fdf41418372f2a14336d8efd904af69&oe=599DDA55',
+				artist: 'https://www.facebook.com/wikrcom/videos/1108612915949295/',
+				//album: 'Wikr.com',
+				duration: 'Wikr.com'
+			},
+			{
+				url: 'https://www.facebook.com/wikrcom/videos/1117790755031511/',
+				name: 'Vanilla panna cotta with strawberry gelatin',
+				trackId: '23',
+				image: 'https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-0/p75x225/19060043_1117791485031438_5856102670120566329_n.jpg?oh=eaadf94870b73edcd960776f4e4042a7&oe=59D7E76F',
+				artist: 'https://www.facebook.com/wikrcom/videos/1117790755031511/',
+				//album: 'Wikr.com',
+				duration: 'Wikr.com'
+			},			
+			{
+				url: 'https://www.facebook.com/wikrcom/videos/1117043335106253/',
+				name: 'Bomby bags made from T-shirts',
+				trackId: '24',
+				image: 'https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-1/14906834_947251632085425_3101138519701294434_n.png?oh=49e9d0a3f14339f96137876efe727ca9&oe=59CF4C1C',
+				artist: 'https://www.facebook.com/wikrcom/videos/1117043335106253/',
+				//album: 'Wikr.com',
+				duration: 'Wikr.com'
+			},
+			{
+				url: 'https://www.facebook.com/wikrcom/videos/vl.720074554828774/853479708129285/?type=1',
+				name: 'Apple Roses With Cinnamon And Cream Cheese. So Elegant, So Delicious!',
+				trackId: '25',
+				image: 'https://scontent.fhen1-1.fna.fbcdn.net/v/t15.0-10/s173x172/18259557_10154288489106529_5042799940653285376_n.jpg?oh=7242ac96b7db9249a3d2289c8e9f819f&oe=59A0FE87',
+				artist: 'https://www.facebook.com/wikrcom/videos/vl.720074554828774/853479708129285/?type=1',
+				//album: 'Wikr.com',
+				duration: 'Wikr.com'
+			},
+			{
+				url: 'https://www.facebook.com/wikrcom/videos/1108612915949295/',
+				name: 'I sewed this very skirt. Yes, out of a shirt',
+				trackId: '26',
+				image: 'https://scontent.fhen1-1.fna.fbcdn.net/v/t15.0-10/p720x720/18943012_1108625199281400_6120594963945226240_n.jpg?oh=6fdf41418372f2a14336d8efd904af69&oe=599DDA55',
+				artist: 'https://www.facebook.com/wikrcom/videos/1108612915949295/',
+				//album: 'Wikr.com',
+				duration: 'Wikr.com'
+			},
+			{
+				url: 'https://www.facebook.com/wikrcom/videos/1117790755031511/',
+				name: 'Vanilla panna cotta with strawberry gelatin',
+				trackId: '27',
+				image: 'https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-0/p75x225/19060043_1117791485031438_5856102670120566329_n.jpg?oh=eaadf94870b73edcd960776f4e4042a7&oe=59D7E76F',
+				artist: 'https://www.facebook.com/wikrcom/videos/1117790755031511/',
+				//album: 'Wikr.com',
+				duration: 'Wikr.com'
+			},
+			{
+				url: 'https://www.facebook.com/wikrcom/videos/1117043335106253/',
+				name: 'Bomby bags made from T-shirts',
+				trackId: '211',
+				image: 'https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-1/14906834_947251632085425_3101138519701294434_n.png?oh=49e9d0a3f14339f96137876efe727ca9&oe=59CF4C1C',
+				artist: 'https://www.facebook.com/wikrcom/videos/1117043335106253/',
+				//album: 'Wikr.com',
+				duration: 'Wikr.com'
+			},
+			{
+				url: 'https://www.facebook.com/wikrcom/videos/vl.720074554828774/853479708129285/?type=1',
+				name: 'Apple Roses With Cinnamon And Cream Cheese. So Elegant, So Delicious!',
+				trackId: '212',
+				image: 'https://scontent.fhen1-1.fna.fbcdn.net/v/t15.0-10/s173x172/18259557_10154288489106529_5042799940653285376_n.jpg?oh=7242ac96b7db9249a3d2289c8e9f819f&oe=59A0FE87',
+				artist: 'https://www.facebook.com/wikrcom/videos/vl.720074554828774/853479708129285/?type=1',
+				//album: 'Wikr.com',
+				duration: 'Wikr.com'
+			},
+			{
+				url: 'https://www.facebook.com/wikrcom/videos/1108612915949295/',
+				name: 'I sewed this very skirt. Yes, out of a shirt',
+				trackId: '2112',
+				image: 'https://scontent.fhen1-1.fna.fbcdn.net/v/t15.0-10/p720x720/18943012_1108625199281400_6120594963945226240_n.jpg?oh=6fdf41418372f2a14336d8efd904af69&oe=599DDA55',
+				artist: 'https://www.facebook.com/wikrcom/videos/1108612915949295/',
+				//album: 'Wikr.com',
+				duration: 'Wikr.com'
+			},
+			{
+				url: 'https://www.facebook.com/wikrcom/videos/1117790755031511/',
+				name: 'Vanilla panna cotta with strawberry gelatin',
+				trackId: '213',
+				image: 'https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-0/p75x225/19060043_1117791485031438_5856102670120566329_n.jpg?oh=eaadf94870b73edcd960776f4e4042a7&oe=59D7E76F',
+				artist: 'https://www.facebook.com/wikrcom/videos/1117790755031511/',
+				//album: 'Wikr.com',
+				duration: 'Wikr.com'
+			},			
+			{
+				url: 'https://www.facebook.com/wikrcom/videos/1117043335106253/',
+				name: 'Bomby bags made from T-shirts',
+				trackId: '214',
+				image: 'https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-1/14906834_947251632085425_3101138519701294434_n.png?oh=49e9d0a3f14339f96137876efe727ca9&oe=59CF4C1C',
+				artist: 'https://www.facebook.com/wikrcom/videos/1117043335106253/',
+				//album: 'Wikr.com',
+				duration: 'Wikr.com'
+			},
+			{
+				url: 'https://www.facebook.com/wikrcom/videos/vl.720074554828774/853479708129285/?type=1',
+				name: 'Apple Roses With Cinnamon And Cream Cheese. So Elegant, So Delicious!',
+				trackId: '215',
+				image: 'https://scontent.fhen1-1.fna.fbcdn.net/v/t15.0-10/s173x172/18259557_10154288489106529_5042799940653285376_n.jpg?oh=7242ac96b7db9249a3d2289c8e9f819f&oe=59A0FE87',
+				artist: 'https://www.facebook.com/wikrcom/videos/vl.720074554828774/853479708129285/?type=1',
+				//album: 'Wikr.com',
+				duration: 'Wikr.com'
+			},
+			{
+				url: 'https://www.facebook.com/wikrcom/videos/1108612915949295/',
+				name: 'I sewed this very skirt. Yes, out of a shirt',
+				trackId: '216',
+				image: 'https://scontent.fhen1-1.fna.fbcdn.net/v/t15.0-10/p720x720/18943012_1108625199281400_6120594963945226240_n.jpg?oh=6fdf41418372f2a14336d8efd904af69&oe=599DDA55',
+				artist: 'https://www.facebook.com/wikrcom/videos/1108612915949295/',
+				//album: 'Wikr.com',
+				duration: 'Wikr.com'
+			},
+			{
+				url: 'https://www.facebook.com/wikrcom/videos/1117790755031511/',
+				name: 'Vanilla panna cotta with strawberry gelatin',
+				trackId: '217',
+				image: 'https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-0/p75x225/19060043_1117791485031438_5856102670120566329_n.jpg?oh=eaadf94870b73edcd960776f4e4042a7&oe=59D7E76F',
+				artist: 'https://www.facebook.com/wikrcom/videos/1117790755031511/',
+				//album: 'Wikr.com',
+				duration: 'Wikr.com'
+			}
+		];
+		
 		this.setState({
 			serverError: false,
-            resultsCount: 0,
             recordsCount: 15,
             positionY: 0,
-			searchQuery: ''
+			searchQuery: '',
+			
+			dataSource: this.state.dataSource.cloneWithRows(json.slice(0, 15)),
+			resultsCount: json.length,
+			responseData: json,
+			filteredItems: json,
+			refreshing: false,
+			showProgress: false
         });
-		
-        fetch('https://api.spotify.com/v1/search?q=' 
-			+ this.state.searchQueryHttp +
-			'&type=track&market=US&limit=50', {
-            method: 'get',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            }
-        })
-            .then((response)=> response.json())
-            .then((responseData)=> {
-				let items = responseData.tracks.items;
-				
-                this.setState({
-                    dataSource: this.state.dataSource.cloneWithRows(items.sort(this.sort).slice(0, 15)),
-                    resultsCount: items.length,
-                    responseData: items,
-                    filteredItems: items
-                });
-            })
-            .catch((error)=> {
-                this.setState({
-                    serverError: true
-                });
-            })
-            .finally(()=> {
-                this.setState({
-                    showProgress: false
-                });
-            });
-    }
+	}
 	
     pressRow(rowData) {
 		let data = {
+			trackId: rowData.trackId,
 			name: rowData.name,
-			image: rowData.album.images[1].url,
-			artist: rowData.artists[0].name,
-			album: rowData.album.name,
-			duration: (+(rowData.duration_ms)/1000/60).toFixed(2) + ' secs',
-			url: rowData.preview_url
+			image: rowData.image,
+			artist: rowData.artist,
+			album: rowData.album,
+			duration: rowData.duration,
+			url: rowData.url
 		};
 		
 		this.props.navigator.push({
-			index: 2,
+			index: 1,
 			data: data
 		});
     }
 	
     renderRow(rowData) {
 		var image;
-
-        if (rowData.album.images[1]) {
-            image = <Image
-				source={{uri: rowData.album.images[1].url}}
-				style={styles.img}
-			/>
-        } else {
-			image = <Image
-				source={require('../../../img/no_image.jpg')}
-				style={styles.img}
-			/>
-		}
+ 
+		image = <Image
+			source={{uri: rowData.image}}
+			style={styles.img}
+		/>
 		
         return (
             <TouchableHighlight
@@ -143,19 +403,12 @@ class SearchTrack extends Component {
                     <View style={styles.textBlock}>
                         <Text style={styles.textItemBold}>
 							{rowData.name}
+						</Text>                           
+						
+						<Text style={styles.textItemBold}>
+							Wikr.com
 						</Text>                        
-						
-						<Text style={styles.textItem}>
-							{rowData.artists[0].name}
-						</Text>
-						
-						<Text style={styles.textItem}>
-							{rowData.album.name}
-						</Text>
-												
-						<Text style={styles.textItem}>
-							{(+(rowData.duration_ms)/1000/60).toFixed(2)  + ' secs'}
-						</Text>	
+
                     </View>
                 </View>
             </TouchableHighlight>
@@ -199,14 +452,16 @@ class SearchTrack extends Component {
         })
     }
 
-    refreshDataAndroid() {
-        this.setState({
-            showProgress: true,
-            resultsCount: 0
-        });
+	refreshDataAndroid() {
+		this.setState({
+			showProgress: true,
+			resultsCount: 0
+		});
 
-        this.getItems();
-    }
+		setTimeout(() => {
+			this.getItems()
+		}, 300);
+	}
 	
     goBack(rowData) {
 		this.props.navigator.pop();
@@ -257,22 +512,30 @@ class SearchTrack extends Component {
 				<View style={styles.header}>
 					<View>
 						<TouchableHighlight
-							onPress={()=> this.goBack()}
-							underlayColor='#48BBEC'
+							onPress={()=> this.refreshDataAndroid()}
+							underlayColor='#ddd'
 						>
 							<Text style={styles.textSmall}>
-								Back
+								 
 							</Text>
 						</TouchableHighlight>	
 					</View>
-					<View style={styles.itemWrap}>
-						<Text style={styles.textLarge}>
-							{this.state.searchQueryHttp}
-						</Text>
+					<View>
+						<TouchableHighlight
+							underlayColor='#ddd'
+						>
+							<Text style={styles.textLarge}>
+								Wikr
+							</Text>
+						</TouchableHighlight>	
 					</View>						
 					<View>
-						<Text style={styles.textSmall}>
-						</Text>
+						<TouchableHighlight
+							underlayColor='#ddd'
+						>
+							<Text style={styles.textSmall}>
+							</Text>
+						</TouchableHighlight>	
 					</View>
 				</View>
 				
@@ -405,7 +668,7 @@ const styles = StyleSheet.create({
 		fontSize: 20,
 		textAlign: 'center',
 		margin: 10,
-		marginRight: 60,
+		marginRight: 20,
 		fontWeight: 'bold',
 		color: 'white'
 	},		

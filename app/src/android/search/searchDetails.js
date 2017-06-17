@@ -50,7 +50,7 @@ class SearchDetails extends Component {
 	addItem() {
         let movies = [];
 
-        AsyncStorage.getItem('rn-movies.movies')
+        AsyncStorage.getItem('rn-wikr.posts')
             .then(req => JSON.parse(req))
             .then(json => {
                 movies = [].concat(json);
@@ -68,7 +68,7 @@ class SearchDetails extends Component {
                     movies.shift()
                 } // Hack !!!
 
-                AsyncStorage.setItem('rn-movies.movies', JSON.stringify(movies))
+                AsyncStorage.setItem('rn-wikr.posts', JSON.stringify(movies))
                     .then(json => {
                             appConfig.movies.refresh = true;
                             this.props.navigator.pop();
@@ -81,7 +81,7 @@ class SearchDetails extends Component {
 	
     playTrack() {
 		this.props.navigator.push({
-			index: 5,
+			index: 3,
 			data: {
 				url: this.state.url
 			}
@@ -98,8 +98,8 @@ class SearchDetails extends Component {
 		image = <Image
 			source={{uri: this.state.image}}
 			style={{
-				height: 300,
-				width: 300,
+				height: 250,
+				width: 250,
 				borderRadius: 10,
 				margin: 5
 			}}
@@ -158,18 +158,6 @@ class SearchDetails extends Component {
 						</Text>
 						
 						<Text style={styles.itemText}>
-							{this.state.artist}
-						</Text>
-						
-						<Text style={styles.itemText}>
-							{this.state.album}
-						</Text>
-						
-						<Text style={styles.itemText}>
-							{this.state.duration}
-						</Text>
-						
-						<Text style={styles.itemText}>
 							{this.state.url}
 						</Text>
 
@@ -177,7 +165,7 @@ class SearchDetails extends Component {
 							onPress={()=> this.playTrack()}
 							style={styles.button}>
 							<Text style={styles.buttonText}>
-								Play track
+								Show post
 							</Text>
 						</TouchableHighlight>
 						

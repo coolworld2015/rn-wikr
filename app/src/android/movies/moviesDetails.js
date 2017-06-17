@@ -48,8 +48,8 @@ class MoviesDetails extends Component {
 	
     deleteMovieDialog() {
 		Alert.alert(
-			'Delete track',
-			'Are you sure you want to delete track ' + this.state.name + '?',
+			'Delete post',
+			'Are you sure you want to delete post ' + this.state.name + '?',
 			[
 				{text: 'Cancel', onPress: () => console.log('Cancel Pressed!')},
 				{
@@ -65,7 +65,7 @@ class MoviesDetails extends Component {
 		var id = this.state.trackId;
 		var movies = [];
 
-		AsyncStorage.getItem('rn-movies.movies')
+		AsyncStorage.getItem('rn-wikr.posts')
 			.then(req => JSON.parse(req))
 			.then(json => {
 
@@ -78,7 +78,7 @@ class MoviesDetails extends Component {
 					}
 				}
 
-				AsyncStorage.setItem('rn-movies.movies', JSON.stringify(movies))
+				AsyncStorage.setItem('rn-wikr.posts', JSON.stringify(movies))
 					.then(json => {
 							appConfig.movies.refresh = true;
 							this.props.navigator.pop();
@@ -108,8 +108,8 @@ class MoviesDetails extends Component {
 		image = <Image
 			source={{uri: this.state.image}}
 			style={{
-				height: 300,
-				width: 300,
+				height: 250,
+				width: 250,
 				borderRadius: 10,
 				margin: 5
 			}}
@@ -168,18 +168,6 @@ class MoviesDetails extends Component {
 						</Text>
 						
 						<Text style={styles.itemText}>
-							{this.state.artist}
-						</Text>
-						
-						<Text style={styles.itemText}>
-							{this.state.album}
-						</Text>
-						
-						<Text style={styles.itemText}>
-							{this.state.duration}
-						</Text>
-						
-						<Text style={styles.itemText}>
 							{this.state.url}
 						</Text>
 						
@@ -187,7 +175,7 @@ class MoviesDetails extends Component {
 							onPress={()=> this.playTrack()}
 							style={styles.button}>
 							<Text style={styles.buttonText}>
-								Play track
+								Show post
 							</Text>
 						</TouchableHighlight>
 						

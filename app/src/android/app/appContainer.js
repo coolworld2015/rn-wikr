@@ -1,7 +1,6 @@
 'use strict';
 
 import React, {Component} from 'react';
-import {BackAndroid} from 'react-native';
 import NavigationExperimental from 'react-native-deprecated-custom-components';
 import ScrollableTabView, {DefaultTabBar} from 'react-native-scrollable-tab-view';
 
@@ -20,13 +19,6 @@ import Wikr from '../movies/wikr';
 class AppContainer extends Component {
     constructor(props) {
         super(props);
-				
-		BackAndroid.addEventListener('hardwareBackPress', () => {
-			if (this.props.navigator) {
-				this.props.navigator.pop();
-			}
-			return true;
-		});
     }
 
     render() {
@@ -52,9 +44,13 @@ class WikrTab extends Component {
 		  
 	renderScene(route, navigator) {
 		switch (route.index) {
-			case 0: return <Wikr routes={this.routes} navigator={navigator} />
+			case 0: return <SearchTrack data={route.data} routes={this.routes} navigator={navigator} />
+					break;
+			case 1: return <SearchDetails data={route.data} routes={this.routes} navigator={navigator} />
+					break;		
+			case 2: return <Wikr routes={this.routes} navigator={navigator} />
 					break;					
-			case 1: return <PlayTrack data={route.data} routes={this.routes} navigator={navigator} />
+			case 3: return <PlayTrack data={route.data} routes={this.routes} navigator={navigator} />
 					break;
  		}
  	}	
