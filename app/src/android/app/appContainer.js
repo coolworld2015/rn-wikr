@@ -4,17 +4,15 @@ import React, {Component} from 'react';
 import NavigationExperimental from 'react-native-deprecated-custom-components';
 import ScrollableTabView, {DefaultTabBar} from 'react-native-scrollable-tab-view';
 
-import Search from '../search/search';
-import SearchArtist from '../search/searchArtist';
-import SearchDetails from '../search/searchDetails';
-import SearchTopTrack from '../search/searchTopTrack';
-import SearchTrack from '../search/searchTrack';
+ 
+import Wikr from '../wikr/wikr';
+import WikrDetails from '../wikr/wikrDetails';
 
-import Movies from '../movies/movies';
-import MoviesDetails from '../movies/moviesDetails';
+import Movies from '../favorites/favorites';
+import MoviesDetails from '../favorites/favoriteDetails';
 
 import PlayTrack from './playTrack';
-import Wikr from '../movies/wikr';
+ 
 
 class AppContainer extends Component {
     constructor(props) {
@@ -27,7 +25,7 @@ class AppContainer extends Component {
                 renderTabBar={() => <DefaultTabBar backgroundColor='white'/>}
             >
                 <WikrTab tabLabel="Wikr"/>
-                <MoviesTab tabLabel="Favorite"/>
+                <MoviesTab tabLabel="Favorites"/>
             </ScrollableTabView>
         );
     }
@@ -44,12 +42,10 @@ class WikrTab extends Component {
 		  
 	renderScene(route, navigator) {
 		switch (route.index) {
-			case 0: return <SearchTrack data={route.data} routes={this.routes} navigator={navigator} />
+			case 0: return <Wikr data={route.data} routes={this.routes} navigator={navigator} />
 					break;
-			case 1: return <SearchDetails data={route.data} routes={this.routes} navigator={navigator} />
-					break;		
-			case 2: return <Wikr routes={this.routes} navigator={navigator} />
-					break;					
+			case 1: return <WikrDetails data={route.data} routes={this.routes} navigator={navigator} />
+					break;				
 			case 3: return <PlayTrack data={route.data} routes={this.routes} navigator={navigator} />
 					break;
  		}

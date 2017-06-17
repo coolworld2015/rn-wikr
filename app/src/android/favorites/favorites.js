@@ -262,7 +262,7 @@ class Movies extends Component {
 							underlayColor='#ddd'
 						>
 							<Text style={styles.textLarge}>
-								Favorite
+								Favorites
 							</Text>
 						</TouchableHighlight>	
 					</View>						
